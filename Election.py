@@ -2,12 +2,7 @@ import csv
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
 
-"""
-explation.
-Input: 
-Output:
-What is it doing?
-"""
+
 """ This function below is the first function which reads 
 a csv file and returns the a list of dictionaries as an output  """
 def csv_file():
@@ -22,16 +17,15 @@ def csv_file():
             row["Turnout"]  = int(row["Turnout"] )
             row["UNDP%2021"] =  int(row["UNDP%2021"] )
             row["PF%2021"] =  int(row["PF%2021"])
-
     return list_of_dict
 
 
-""" this function is comparing results between Hichilema and Lungu,
+""" This function is comparing results between Hichilema and Lungu,
  its taking a list of dictionary as an input and returnig a list as an output """
 def compare(list_of_data):
     district = []
     for row in list_of_data:
-  #      print(row)
+        print(row)
         if int(row["Hichilema"]) > int(row["Lungu"]):
             district.append(row["district"])
     return district
@@ -43,8 +37,6 @@ def state_with_highest(list_of_dict):
     max_value = max(list_of_dict, key=lambda x:x['Totalvotes'])
     return max_value 
    
-    
-
 
 """ This function is sorting the list of dict according to districts in ascending order.
    Taking in a list of dict as input and and list of dict as an output"""
@@ -63,7 +55,7 @@ def filtrating(list_of_dict):
     return filtered
 
 
-""" this is the main function where the program starts executing and the above functions are called"""  
+""" This is the main function where the program starts executing and the above functions are called"""  
 if __name__ == '__main__':
     printcompare(csv_file())
     pp.pprint(state_with_highest(csv_file()))
