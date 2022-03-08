@@ -65,8 +65,8 @@ def filtrating(list_of_dict):
 
 """ this is the main function where the program starts executing and the above functions are called"""  
 if __name__ == '__main__':
-   #printcompare(csv_file())
-    #pp.pprint(state_with_highest(csv_file()))
-    #pp.pprint(get_state(csv_file()))
-   # pp.pprint(sort_list(csv_file()))
+    printcompare(csv_file())
+    pp.pprint(state_with_highest(csv_file()))
+    pp.pprint(get_state(csv_file()))
+    pp.pprint(sort_list(csv_file()))
     pp.pprint(filtrating(csv_file()))
